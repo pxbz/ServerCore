@@ -1,0 +1,493 @@
+database:
+  username:
+  password:
+  server:
+  port:
+  database-name: servercore
+
+
+# Information about the server for the plugin to use in chat messages.
+
+server-info:
+  name: "Hub"
+  coloured-name: "Hub"
+  prefix: "{C1}&lHub {C2}&l>{C1}"
+  primary-colour: "&b"
+  secondary-colour: "&3"
+  tertiary-colour: "&e"
+
+
+# Set a message to '' to disable it.
+
+# Example:
+# default-permission-message: ''
+
+messages:
+  default-permission-message: "Unknown command. Type \"/help\" for help."
+  player-invalid-sender: "{PREFIX} This command may only be used by the {C2}Console{C1}."
+  console-invalid-sender: "Only players may use this command."
+  command-invalid-player: "{PREFIX} &cPlayer '&4{PLAYER}&c' is invalid or not online."
+  invalid-duration: "{PREFIX} &c'&4{DURATION}&c' is not a valid duration."
+  command-on-cooldown: "{PREFIX} {LABEL} is on cooldown for {TIMEREMAINING} seconds."
+  player-never-joined: "{PREFIX} &cPlayer '&4{TARGET}&c' has never joined the server."
+
+  invalid-colour-codes: "{PREFIX} &cNo valid colour codes found in '&4{INPUT}&c'."
+  chat-colour-set: "{PREFIX} Chat colour set to {COLOUR}this&r{C1}."
+  chat-colour-off: "{PREFIX} Chat colour disabled."
+  chat-colour-off-already: "{PREFIX} You didn't have a chat colour set in the first place."
+  global-chat-enabled: "{PREFIX} Global chat {C3}enabled{C1}."
+  global-chat-disabled: "{PREFIX} Global chat {C3}disabled{C1}."
+  chat-cleared: "{PREFIX} The chat has been {C3}cleared{C1}."
+  cant-talk-while-chat-muted: "{PREFIX} You may not talk while the chat is muted."
+  chat-muted: "{PREFIX} The chat has been muted{C3}{BYPLAYER}{C1}."
+  chat-unmuted: "{PREFIX} The chat has been unmuted{C3}{BYPLAYER}{C1}."
+  mute-speaker-enabled: "{PREFIX} {C3}{TARGET}{C1} may now speak while chat is muted."
+  mute-speaker-disabled: "{PREFIX} {C3}{TARGET}{C1} can no longer speak while chat is muted."
+  private-chat-on: "{PREFIX} Private chat {C3}enabled{C1}."
+  private-chat-off: "{PREFIX} Private chat {C3}disabled{C1}."
+  private-chat-on-other: "{PREFIX} Private chat {C3}enabled{C1} for {C3}{TARGET}{C1}."
+  private-chat-off-other: "{PREFIX} Private chat {C3}disabled{C1} for {C3}{TARGET}{C1}."
+  staff-chat-on: "{PREFIX} Staff chat {C3}enabled{C1}."
+  staff-chat-off: "{PREFIX} Staff chat {C3}disabled{C1}."
+  staff-chat-on-other: "{PREFIX} Staff chat {C3}enabled{C1} for {C3}{TARGET}{C1}."
+  staff-chat-off-other: "{PREFIX} Staff chat {C3}disabled{C1} for {C3}{TARGET}{C1}."
+  public-chat: "{PREFIX} You are in {C3}PUBLIC{C1} chat."
+
+  toggle-flight-on: "{PREFIX} Flight {C3}enabled{C1}."
+  toggle-flight-off: "{PREFIX} Flight {C3}disabled{C1}."
+  toggle-flight-on-other: "{PREFIX} Flight {C3}enabled{C1} for {C3}{TARGET}{C1}."
+  toggle-flight-off-other: "{PREFIX} Flight {C3}disabled{C1} for {C3}{TARGET}{C1}."
+  gamemode-changed: "{PREFIX} Gamemode set to {C3}{GAMEMODE}{C1}."
+  gamemode-changed-other: "{PREFIX} {C3}{TARGET}{C1}'s gamemode set to {C3}{GAMEMODE}{C1}."
+  vanished: "{PREFIX} You are vanished."
+  unvanished: "{PREFIX} You are no longer vanished."
+  cleared-inventory: "{PREFIX} Your inventory has been cleared."
+  cleared-inventory-other: "{PREFIX} {C3}{TARGET}{C1}'s inventory has been cleared."
+  uncleared-inventory: "{PREFIX} Your inventory has been uncleared."
+  uncleared-inventory-other: "{PREFIX} {C3}{TARGET}{C1}'s inventory has been uncleared."
+  unclear-items-empty: "{PREFIX} There are no items to return."
+  unclear-items-empty-other: "{PREFIX} There are no items to return to {C3}{TARGET}{C1}."
+  sudo-chat: "{PREFIX} Forcing {C3}{TARGET}{C1} to chat."
+  sudo-command: "{PREFIX} Forcing {C3}{TARGET}{C1} to run command: {C3}/{COMMAND}{C1}."
+  sudo-all-chat: "{PREFIX} Forcing {C3}ALL{C1} players to chat."
+  sudo-all-command: "{PREFIX} Forcing {C3}ALL{C1} players to run command: {C3}/{COMMAND}{C1}."
+  nickname-set: "{PREFIX} Your nickname has been updated to {C3}{NICK}{C1}."
+  nickname-set-other: "{PREFIX} {C3}{TARGET}{C1}'s nickname has been updated to {C3}{NICK}{C1}."
+  real-name: "{PREFIX} {C3}{NICK}{C1}'s real username is {C3}{REALNAME}{C1}."
+  seen: "{PREFIX} {C3}{TARGET}{C1} was last seen {C3}{LASTPLAYED} seconds{C1} ago."
+
+  kick-message: "{C1}You have been kicked from {C2}&l{COLOUREDSERVER}{C1}{BYPLAYER}{C1}{REASON}{C1}."
+  silent-kick-message: "{PREFIX} {C3}{KICKEDPLAYER}{C1} has been {C3}silently{C1} kicked from {C2}&l{COLOUREDSERVER}{C1}{BYPLAYER}{C1}{REASON}{C1}."
+  announced-kick-message: "{PREFIX} {C3}{KICKEDPLAYER}{C1} has been kicked from {C2}&l{COLOUREDSERVER}{C1}{BYPLAYER}{C1}{REASON}{C1}."
+  ban-message: "{C1}You have been banned from {C2}&l{COLOUREDSERVER}{C1}{BYPLAYER}{C1}{REASON}{C1}"
+  silent-ban-message: "{PREFIX} {C3}{BANNEDPLAYER}{C1} has been {C3}silently{C1} banned from {C2}&l{COLOUREDSERVER}{C1}{BYPLAYER}{C1}{REASON}{C1}."
+  announced-ban-message: "{PREFIX} {C3}{BANNEDPLAYER}{C1} has been banned from {C2}&l{COLOUREDSERVER}{C1}{BYPLAYER}{C1}{REASON}{C1}."
+  tempban-message: "{C1}You have been temporarily banned from {C2}&l{COLOUREDSERVER}{C1}{BYPLAYER}{C1}{DURATION}{C1}{REASON}{C1}"
+  silent-tempban-message: "{PREFIX} {C3}{BANNEDPLAYER}{C1} has been {C3}silently{C1} tempbanned from {C2}&l{COLOUREDSERVER}{C1}{BYPLAYER}{C1}{DURATION}{C1}{REASON}{C1}."
+  announced-tempban-message: "{PREFIX} {C3}{BANNEDPLAYER}{C1} has been temporarily banned from {C2}&l{COLOUREDSERVER}{C1}{BYPLAYER}{C1}{DURATION}{C1}{REASON}{C1}."
+  player-not-banned: "{PREFIX} {C3}{TARGET}{C1} is not banned."
+  silent-unban-message: "{PREFIX} {C3}{UNBANNEDPLAYER}{C1} has been silently unbanned{C3}{BYPLAYER}{C1}."
+  announced-unban-message: "{PREFIX} {C3}{UNBANNEDPLAYER}{C1} has been unbanned{C3}{BYPLAYER}{C1}."
+
+  teleporting-to-player: "{PREFIX} Teleporting to {C3}{TARGET}{C1}."
+  teleporting-player-to-player: "{PREFIX} Teleporting {C3}{TARGET1}{C1} to {C3}{TARGET2}{C1}."
+  teleporting-mass-to-player: "{PREFIX} Teleporting {C3}{TARGETS}{C1} to {C3}{TARGET}{C1}."
+  teleporting-player-to-sender: "{PREFIX} Teleporting {C3}{TARGET}{C1} to your location."
+  teleporting-mass-to-sender: "{PREFIX} Teleporting {C3}{TARGETS}{C1} to your location."
+  teleporting-all-to-sender: "{PREFIX} Teleporting all players to your location."
+  teleported-back: "{PREFIX} Teleporting to previous location."
+  teleporting-back: "{PREFIX} Teleporting in {C3}{DELAY} seconds{C1}, don't move..."
+  teleporting-player-to-back: "{PREFIX} Teleporting {C3}{TARGET}{C1} to their previous location."
+  teleporting-mass-to-back: "{PREFIX} Teleporting {C3}{TARGETS}{C1} to their previous locations."
+  tpa-sent: "{PREFIX} Tpa request sent to {C3}{TARGET}{C1}."
+  tpa-received: "{PREFIX} {C3}{TARGET}{C1} wants to teleport to you."
+  tpahere-sent: "{PREFIX} Tpahere request sent to {C3}{TARGET}{C1}."
+  tpahere-received: "{PREFIX} {C3}{TARGET}{C1} wants you to teleport to their location."
+  tpa-sender-accept: "{PREFIX} {C3}{TARGET}{C1} accepted your tpa request. Teleporting in {C3}{DELAY} seconds{C1}, don't move..."
+  tpa-receiver-accept: "{PREFIX} You accepted {C3}{TARGET}{C1}'s tpa request. Teleporting in {C3}{DELAY} seconds{C1}."
+  tpahere-sender-accept: "{PREFIX} {C3}{TARGET}{C1} accepted your tpahere request. Teleporting in {C3}{DELAY} seconds{C1}."
+  tpahere-receiver-accept: "{PREFIX} You accepted {C3}{TARGET}{C1}'s tpahere request. Teleporting in {C3}{DELAY} seconds{C1}, don't move..."
+  tpaall-sent: "{PREFIX} Tpahere request sent to all online players."
+  already-sent-tpa: "{PREFIX} You have already sent a tpa request to {C3}{TARGET}{C1}."
+  already-sent-tpahere: "{PREFIX} You have already sent a tpahere request to {C3}{TARGET}{C1}."
+  tp-request-teleporting: "{PREFIX} Teleporting to {C3}{TARGET}{C1}."
+  tpaccept-no-incoming-requests: "{PREFIX} You don't have any incoming teleport requests."
+  # Maybe condense these down into just 2 messages instead of 20?
+  # tprequest-cancelled-sender: "{PREFIX} {TYPE} request to {TARGET} cancelled: {REASON}"
+  # tprequest-cancelled-receiver: "{PREFIX} {TYPE} request from {TARGET} cancelled: {REASON}"
+  # Maybe it's not a good idea to put comments for myself in a config file if this ever does end up
+  # being a public plugin?
+  tpa-cancelled-sender-movement: "{PREFIX} You moved! Tpa request to {C3}{TARGET}{C1} cancelled."
+  tpa-cancelled-sender-expired: "{PREFIX} Your tpa request to {C3}{TARGET}{C1} has expired."
+  tpa-cancelled-sender-tpdenied: "{PREFIX} {C3}{TARGET}{C1} denied your tpa request."
+  tpa-cancelled-sender-unsafe: "{PREFIX} The destination is unsafe! Tpa request to {C3}{TARGET}{C1} cancelled."
+  tpa-cancelled-sender-tpacancel: "{PREFIX} All outgoing tpa requests cancelled."
+  tpa-cancelled-receiver-movement: "{PREFIX} {C3}{TARGET}{C1} moved! Tpa request cancelled."
+  tpa-cancelled-receiver-expired: "{PREFIX} Tpa request from {C3}{TARGET}{C1} has expired."
+  tpa-cancelled-receiver-tpdenied: "{PREFIX} You denied {C3}{TARGET}{C1}'s tpa request."
+  tpa-cancelled-receiver-unsafe: "{PREFIX} The destination is unsafe! Tpa request from {C3}{TARGET}{C1} cancelled."
+  tpa-cancelled-receiver-tpacancel: "{PREFIX} {C3}{TARGET}{C1} cancelled their tpa request."
+  tpahere-cancelled-sender-movement: "{PREFIX} {C3}{TARGET}{C1} moved! Tpahere request cancelled."
+  tpahere-cancelled-sender-expired: "{PREFIX} Your tpahere request to {C3}{TARGET}{C1} has expired."
+  tpahere-cancelled-sender-tpdenied: "{PREFIX} {C3}{TARGET}{C1} denied your tpahere request."
+  tpahere-cancelled-sender-unsafe: "{PREFIX} The destination is unsafe! Tpahere request to {C3}{TARGET}{C1} cancelled."
+  tpahere-cancelled-sender-tpacancel: "{PREFIX} Outgoing tpahere request to {C3}{TARGET}{C1} cancelled."
+  tpahere-cancelled-receiver-movement: "{PREFIX} You moved! Tpahere request from {C3}{TARGET}{C1} cancelled."
+  tpahere-cancelled-receiver-expired: "{PREFIX} Tpahere request from {C3}{TARGET}{C1} has expired."
+  tpahere-cancelled-receiver-tpdenied: "{PREFIX} You denied {C3}{TARGET}{C1}'s tpahere request."
+  tpahere-cancelled-receiver-unsafe: "{PREFIX} The destination is unsafe! Tpahere request from {C3}{TARGET}{C1} cancelled."
+  tpahere-cancelled-receiver-tpacancel: "{PREFIX} {C3}{TARGET}{C1} cancelled their tpahere request."
+  rtp-teleported: "{PREFIX} Teleported to a random location!"
+  tp-requests-disabled: "{PREFIX} {C3}{TARGET}{C1} has teleport requests disabled."
+
+  tping-to-spawn: "{PREFIX} Teleporting to {C3}spawn{C1} in {C3}{DELAY} seconds{C1}, don't move..."
+  tp-to-spawn: "{PREFIX} Teleported to {C3}spawn{C1}."
+  tp-to-spawn-other: "{PREFIX} Teleported {C3}{TARGET}{C1} to {C3}spawn{C1}."
+  spawn-set: "{PREFIX} Spawn has been set to your location."
+  on-warp-cooldown: "{PREFIX} &cYou can't warp for &4{TIMELEFT} seconds&c."
+  teleport-cancelled-movement: "{PREFIX} Teleportation cancelled. You moved!"
+  warping-to-location: "{PREFIX} Teleporting to {C3}{WARP}{C1} in {C3}{DELAY} seconds{C1}, don't move."
+  warped-to-location: "{PREFIX} Teleporting to {C3}{WARP}{C1}."
+  warped-to-location-other: "{PREFIX} Teleporting {C3}{TARGET}{C1} to {C3}{WARP}{C1}."
+  warps-list: "{C2}Warps:&r {C1}{WARPS}{C2}."
+  invalid-warp: "{PREFIX} {C3}{WARP}{C1} is not a valid warp."
+  warp-set: "{PREFIX} New warp {C3}{WARP}{C1} created."
+  warp-deleted: "{PREFIX} Deleted warp {C3}{WARP}{C1}."
+
+  config-reloading: "{PREFIX} Configuration is being reloaded by {C3}{SENDER}{C1}..."
+  config-reloaded: "{PREFIX} Configuration reloaded by {C3}{SENDER}{C1} in {C2}{ELAPSED}ms{C1}."
+
+  newbie-prot-expired: "{PREFIX} Your {C3}newbie protection{C1} has expired. You can now be attacked by other players!"
+  attacker-has-newbie-prot: "{PREFIX} You can't attack other players because you have {C3}newbie protection{C1}! Type {C3}/newbie disable{C1} to diable it."
+  victim-has-newbie-prot: "{PREFIX} You can't attack {C3}{TARGET}{C1} because they have newbie protection!"
+  combat-logged: "{PREFIX} {C3}{VICTIM}{C1} logged out while in combat with {C3}{ATTACKER}{C1}!"
+  combat-tag-actionbar-timer: "{C1}You are in combat for {C3}{TIMELEFT} seconds{C1}"
+  combat-tag-end: "{C1}You are no longer in combat."
+  combat-tagged-victim: "{PREFIX} You have been combat tagged by {C3}{ATTACKER}{C1}!"
+  combat-tagged-attacker: "{PREFIX} You have combat tagged {C3}{VICTIM}{C1}!"
+  dont-have-newbie-prot: "{PREFIX} You don't have newbie protection!"
+  newbie-prot-disabled: "{PREFIX} You have disabled newbie protection."
+  newbie-time: "{PREFIX} You have {C3}{TIMELEFT} seconds{C1} of newbie protection left."
+
+modules:
+  teleportation:
+    teleport-delay: 5
+    bypass-teleport-delay-permission: servercore.teleportation.bypassteleportdelay
+    commands:
+      tp:
+        name: teleport
+        description: "Teleport to another player, or teleport players to other players."
+        aliases: [tp]
+        usage: "/{LABEL} <target1> [target2]"
+        permission: servercore.teleportation.tp
+        mass-tp-permission: servercore.teleportation.tpmass
+      tphere:
+        name: teleporthere
+        description: "Teleport another player to your location."
+        aliases: [tphere]
+        usage: "/{LABEL} <target>"
+        permission: servercore.teleportation.tphere
+        mass-tp-permission: servercore.teleportation.tpmass
+      tpall:
+        name: teleportall
+        description: "Teleport all players to your location."
+        aliases: [tpall]
+        permission: servercore.teleportation.tpall
+        tpall-exempt-permission: servercore.teleportation.tpall.exempt
+      tpa:
+        name: tpask
+        usage: "/{LABEL} <target>"
+        description: "Send a teleport request to a player."
+        aliases: [tpa]
+        permission: servercore.teleportation.tpa
+      tpahere:
+        name: tpaskhere
+        usage: "/{LABEL} <target>"
+        description: "Request a player to teleport to your location."
+        aliases: [tpahere]
+        permission: servercore.teleportation.tpahere
+      tpaall:
+        name: tpaskall
+        description: "Request all online players to teleport to your location."
+        aliases: [tpaall]
+        permission: servercore.teleportation.tpaall
+        tpaall-exempt-permission: servercore.teleportation.tpaall.exempt
+      tpaccept:
+        name: tpaccept
+        usage: "/{LABEL} [target]"
+        description: "Accept the last teleport request or a teleport request from a specified player."
+        permission: servercore.teleportation.tpaccept
+      tpadeny:
+        name: tpadeny
+        usage: "/{LABEL} [target]"
+        aliases: [tpdeny]
+        description: "Deny the last teleport request or a teleport request from a specified player."
+        permission: servercore.teleportation.tpadeny
+      tpacancel:
+        name: tpacancel
+        description: "Cancel all outgoing teleport requests."
+        permission: servercore.teleportation.tpacancel
+      tpatoggle:
+        name: tpasktoggle
+        usage: "/{LABEL} [on | off]"
+        aliases: [tpatoggle]
+        description: "Enable or disable tpa requests."
+        permission: servercore.teleportation.tpatoggle
+      back:
+        name: back
+        description: "Teleport to a previous location."
+        permission: servercore.teleportation.back
+        back-other-permission: servercore.teleportation.back.other
+        mass-tp-permission: servercore.teleportation.tpmass
+      rtp:
+        name: randomteleport
+        usage: "/{LABEL} [on | off]"
+        aliases: [randomtp, rtp, tpr, tprandom, teleportrandom, wild]
+        description: "Teleport to a random location."
+        permission: servercore.teleportation.rtp
+        radius: 1000
+        cooldown: 60
+  moderation:
+    commands:
+      kick:
+        name: kick
+        usage: "/{LABEL} <target> [reason]"
+        description: "Kick a player from the server."
+        permission: servercore.moderation.kick
+      kicksilent:
+        name: kicksilent
+        usage: "/{LABEL} <target> [reason]"
+        description: "Silently kick a player from the server."
+        aliases: [skick, silentkick]
+        permission: servercore.moderation.kicksilent
+        notify-permission: servercore.moderation.kicksilent.notify
+      ban:
+        name: ban
+        usage: "/{LABEL} <target> [reason]"
+        description: "Ban a player from the server permanently."
+        permission: servercore.moderation.ban
+      bansilent:
+        name: bansilent
+        usage: "/{LABEL} <target> [reason]"
+        description: "Silently ban a player from the server permanently."
+        aliases: [sban, silentban]
+        permission: servercore.moderation.bansilent
+        notify-permission: servercore.moderation.bansilent.notify
+      tempban:
+        name: tempban
+        usage: "/{LABEL} <target> <duration> [reason]"
+        description: "Tempporarily ban a player from the server."
+        permission: servercore.moderation.tempban
+      tempbansilent:
+        name: tempbansilent
+        usage: "/{LABEL} <target> <duration> [reason]"
+        description: "Silently tempban a player from the server."
+        aliases: [stempban, silenttempban]
+        permission: servercore.moderation.tempban
+        notify-permission: servercore.moderation.tempban.notify
+      unban:
+        name: unban
+        usage: "/{LABEL} <target>"
+        description: "Unban a player from the server."
+        permission: servercore.moderation.unban
+      unbansilent:
+        name: unbansilent
+        usage: "/{LABEL} <target>"
+        description: "Silently unban a player from the server."
+        aliases: [sunban, silentunban]
+        permission: servercore.moderation.unbansilent
+        notify-permission: servercore.moderation.unbansilent.notify
+      banip:
+      tempbanip:
+      unbanip:
+      blacklist:
+      tempblacklist:
+      unblacklist:
+      mute:
+      tempmute:
+      unmute:
+  essentials:
+    see-vanished-players-permission: servercore.essentials.seevanished
+    commands:
+      gamemode:
+        name: gamemode
+        usage: "/{LABEL} <gamemode> [target]"
+        description: "Set gamemode for yourself or another player."
+        aliases: [gm]
+        permission: servercore.essentials.gamemode
+        other-permission: servercore.essentials.gamemode.other
+#      invsee:
+#      endersee:
+      fly:
+        name: fly
+        usage: "/{LABEL} [target]"
+        description: "Toggle flight on or off for yourself or another player."
+        aliases: [togglefly, toggleflight, flight]
+        permission: servercore.essentials.fly
+        other-permission: servercore.essentials.fly.other
+      speed:
+      enchant:
+      vanish:
+        name: vanish
+        description: "Vanish or unvanish to make it look like you are not online."
+        aliases: [v]
+        permission: servercore.essentials.vanish
+      sudo:
+        name: sudo
+        usage: "/{LABEL} <target> <command | c:>"
+        description: "Force another player or all players to run a command or chat."
+        permission: servercore.essentials.sudo
+        all-permission: servercore.essentials.sudo.all
+      clear:
+        name: clear
+        description: "Clear your inventory or another player's inventory."
+        aliases: [clearinventory, ci]
+        usage: "/{LABEL} [target]"
+        permission: servercore.essentials.clear
+        other-permission: servercore.essentials.clear.other
+      unclear:
+        name: unclear
+        description: "Unclear your inventory or another player's inventory."
+        aliases: [unclearinventory, uci]
+        usage: "/{LABEL} [target]"
+        permission: servercore.essentials.unclear
+        other-permission: servercore.essentials.unclear.other
+      nick:
+        name: nick
+        description: "Set your nickname or another player's nickname."
+        aliases: [nickname]
+        usage: "/{LABEL} <nickname> [target]"
+        permission: servercore.essentials.nick
+        other-permission: servercore.essentials.nick.other
+      realname:
+        name: realname
+        description: "Check the player's real username."
+        usage: "/{LABEL} <target>"
+        permission: servercore.essentials.realname
+      seen:
+        name: seen
+        description: "Check the last time a player was online."
+        aliases: [lastseen]
+        usage: "/{LABEL} <target>"
+        permission: servercore.essentials.seen
+  chat:
+    format: "{PLAYERPREFIX}{USERNAME} {PLAYERSUFFIX}&l>&r {MESSAGE}"
+    staff-chat-format: "&3[&bStaff&3]&b {USERNAME} &3&l>&r&b {MESSAGE}"
+    private-chat-format: "&2[&aPrivate&2]&a {USERNAME} &2&l>&r&a {MESSAGE}"
+    coloured-chat-permission: servercore.chat.colouredchat
+    commands:
+      chatcolour:
+        name: chatcolour
+        description: "Change the default colour of your chat messages."
+        aliases: [chatcolor, colour, color, cc]
+        usage: "/{LABEL} <colour code>"
+        permission: servercore.chat.chatcolour
+      broadcast:
+        name: broadcast
+        description: "Broadcast a message to all players on the server. Add \"-p \" to the start of the message to include the prefix."
+        aliases: [bc]
+        usage: "/{LABEL} [-p] <message>"
+        permission: servercore.chat.broadcast
+      broadcastglobal:
+        name: broadcastglobal
+        description: "Broadcast a message to all players across the server. Add \"-p \" to the start of the message to include the prefix."
+        aliases: [bcg]
+        usage: "/{LABEL} [-p] <message>"
+        permission: servercore.chat.broadcastglobal
+      globalchat:
+        name: globalchat
+        description: "Toggle global chat on or off."
+        aliases: [gc]
+        permission: servercore.chat.globalchat
+      staffchat:
+        name: staffchat
+        description: "Toggle staff chat for yourself or another player."
+        aliases: [sc, schat]
+        usage: "/{LABEL} [target]"
+        permission: servercore.chat.staffchat
+        other-permission: servercore.chat.staffchat.other
+      privatechat:
+        name: privatechat
+        description: "Toggle private chat for yourself or another player."
+        aliases: [privchat, pchat, pc]
+        usage: "/{LABEL} [target]"
+        permission: servercore.chat.privatechat
+        other-permission: servercore.chat.privatechat.other
+      clearchat:
+        name: clearchat
+        description: "Clear the chat."
+        aliases: [chatclear, clchat]
+        permission: servercore.chat.clearchat
+      mutechat:
+        name: mutechat
+        description: "Mute the chat."
+        aliases: [chatmute]
+        permission: servercore.chat.mutechat
+        bypass-permission: servercore.chat.mutechat
+      mutespeaker:
+        name: mutespeaker
+        description: "Toggle a player's right to speak while chat is muted."
+        usage: "/{LABEL} <target>"
+        permission: servercore.chat.mutespeaker
+  warping:
+    warp-cooldown: 60
+    warp-delay: 5
+    spawn-on-join: true
+    bypass-warp-delay-permission: servercore.warping.bypasswarpdelay
+    commands:
+      spawn:
+        name: spawn
+        description: "Teleport yourself or another player to the server's spawn point."
+        usage: "/{LABEL} [target]"
+        permission: servercore.warping.spawn
+        other-permission: servercore.warping.spawn.other
+      setspawn:
+        name: setspawn
+        description: "Set the server's spawn point."
+        permission: servercore.warping.setspawn
+      setwarp:
+        name: setwarp
+        description: "Set a warp location."
+        usage: "/{LABEL} <name>"
+        permission: servercore.warping.setwarp
+      delwarp:
+        name: delwarp
+        description: "Delete a warp location."
+        aliases: [deletewarp]
+        usage: "/{LABEL} <warp>"
+        permission: servercore.warping.delwarp
+      warp:
+        name: warp
+        description: "Teleport yourself or another player to a warp location."
+        usage: "/{LABEL} <warp> [target]"
+        permission: servercore.warping.warp
+        other-permission: servercore.warping.warp.other
+      warps:
+        name: warps
+        description: "Get a list of all warps that you have permission to use."
+        aliases: [listwarps]
+        permission: servercore.warping.warps
+  misc:
+    commands:
+      servercore:
+        name: servercore
+        description: "Main command for ServerCore."
+        usage: "/{LABEL} reload OR /{LABEL} help <pagenumber | command> [command name]"
+        aliases: [core]
+        permission: servercore.misc.servercore
+        help-permission: servercore.misc.servercore.help
+        help-message-header: "{C2}Displaying ServerCore commands page {C1}{PAGE}{C2}/{C1}{TOTALPAGES}{C2}:"
+        help-message-format: "{C1}{NUMBER}. {C2}{COMMAND}{C1}"
+        help-individual-command-format: "{C2}Displaying help for {C1}{COMMAND}{C2}:\n{COMMAND}: {C1}{DESCRIPTION}\n{C2}Usage: {C1}{USAGE}\n{C2}Aliases: {C1}{ALIASES}"
+        help-page-length: 8
+        reload-permission: servercore.misc.servercore.reload
+  combat:
+    newbie-prot-duration: 900
+    combat-tag-duration: 15
+    commands:
+      newbie:
+        name: newbie
+        description: "Main command for newbie protection."
+        usage: "/{LABEL} <time | disable>"
+        aliases: [newbieprot, pvpprot]
+        permission: servercore.combat.newbie

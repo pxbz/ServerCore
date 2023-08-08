@@ -1,0 +1,130 @@
+name: ServerCore
+version: '${project.version}'
+main: me.pxbz.servercore.ServerCore
+api-version: 1.19
+prefix: ServerCore
+authors: [pxbz]
+description: Core plugin for my network server.
+depend: [Vault]
+
+permissions:
+  servercore.*:
+    description: Gives all permissions for all ServerCore modules
+    default: op
+    children:
+      servercore.teleportation.*: true
+      servercore.moderation.*: true
+      servercore.essentials.*: true
+      servercore.chat.*: true
+      servercore.warping.*: true
+      servercore.misc.*: true
+  servercore.teleportation.*:
+    description: Gives all permissions for ServerCore's teleportation module
+    default: op
+    children:
+      servercore.teleportation.tp: true
+      servercore.teleportation.tpmass: true
+      servercore.teleportation.bypassteleportdelay: true
+      servercore.teleportation.tphere: true
+      servercore.teleportation.tpall: true
+      servercore.teleportation.tpall.exempt: true
+      servercore.teleportation.tpa: true
+      servercore.teleportation.tpahere: true
+      servercore.teleportation.tpaall: true
+      servercore.teleportation.tpatoggle: true
+      servercore.teleportation.tpaccept: true
+      servercore.teleportation.tpadeny: true
+      servercore.teleportation.back: true
+      servercore.teleportation.back.other: true
+      servercore.teleportation.rtp: true
+  servercore.moderation.*:
+    description: Gives all permissions for ServerCore's moderation module
+    default: op
+    children:
+      servercore.moderation.kick: true
+      servercore.moderation.kicksilent: true
+      servercore.moderation.kicksilent.notify: true
+      servercore.moderation.ban: true
+      servercore.moderation.bansilent: true
+      servercore.moderation.bansilent.notify: true
+      servercore.moderation.tempban: true
+      servercore.moderation.tempban: true
+      servercore.moderation.tempban.notify: true
+      servercore.moderation.unban: true
+      servercore.moderation.unbansilent: true
+      servercore.moderation.unbansilent.notify: true
+      servercore.moderation.banip: true
+      servercore.moderation.tempbanip: true
+      servercore.moderation.unbanip: true
+      servercore.moderation.mute: true
+      servercore.moderation.tempmute: true
+      servercore.moderation.unmute: true
+      servercore.moderation.blacklist: true
+      servercore.moderation.tempblacklist: true
+      servercore.moderation.unblacklist: true
+  servercore.essentials.*:
+    description: Gives all permissions for ServerCore's essentials module
+    default: op
+    children:
+      servercore.essentials.gamemode: true
+      servercore.essentials.gamemode.other: true
+      servercore.essentials.invsee: true
+      servercore.essentials.endersee: true
+      servercore.essentials.fly: true
+      servercore.essentials.fly.other: true
+      servercore.essentials.speed: true
+      servercore.essentials.speed.other: true
+      servercore.essentials.speed.walk: true
+      servercore.essentials.speed.fly: true
+      servercore.essentials.enchant: true
+      servercore.essentials.vanish: true
+      servercore.essentials.vanish.other: true
+      servercore.essentials.seevanished: true
+      servercore.essentials.supervanish: true
+      servercore.essentials.supervanish.other: true
+      servercore.essentials.sudo: true
+      servercore.essentials.sudo.all: true
+      servercore.essentials.clear: true
+      servercore.essentials.clear.other: true
+      servercore.essentials.unclear: true
+      servercore.essentials.unclear.other: true
+      servercore.essentials.nick: true
+      servercore.essentials.nick.other: true
+      servercore.essentials.realname: true
+      servercore.essentials.seen: true
+  servercore.chat.*:
+    description: Gives all permissions for ServerCore's chat module
+    default: op
+    children:
+      servercore.chat.colouredchat: true
+      servercore.chat.chatcolour: true
+      servercore.chat.broadcast: true
+      servercore.chat.broadcastglobal: true
+      servercore.chat.globalchat: true
+      servercore.chat.staffchat: true
+      servercore.chat.staffchat.other: true
+      servercore.chat.privatechat: true
+      servercore.chat.privatechat.other: true
+      servercore.chat.clearchat: true
+      servercore.chat.mutechat: true
+      servercore.chat.mutespeaker: true
+      servercore.chat.ignore: true
+  servercore.warping.*:
+    description: Gives all permissions for ServerCore's warping module
+    default: op
+    children:
+      servercore.warping.spawn: true
+      servercore.warping.spawn.other: true
+      servercore.warping.setspawn: true
+      servercore.warping.warp: true
+      servercore.warping.warp.other: true
+      servercore.warping.bypasswarpdelay: true
+      servercore.warping.warps: true
+      servercore.warping.setwarp: true
+  servercore.misc.*:
+    description: Gives all permissions for ServerCore's misc module
+    default: op
+    children:
+      servercore.misc.servercore: true
+      servercore.misc.servercore.help: true
+      servercore.misc.servercore.reload: true
